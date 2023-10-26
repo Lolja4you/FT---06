@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-size: 17px auto;
+    line-height: 1.6;
+    background-color: rgba(0, 0, 15, 1);
+    text-rendering: geometricprecision;
+    color: black;
+    font-family: "Roboto","Open Sans",helvetica,arial,sans-serif
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: rever;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+a{
+    transition: color 2.9 linear;
+    text-decoration: none;
+    color: rgb(255, 193, 217);
+}
+
+a:hover{
+    color: rgb(255, 255, 255);
+}
+
+li{
+    text-shadow: -0.1px 0.1px 0.1px silver;
+}
+
+img{
+    width: 120;
+    height: 120;
+    border-radius: 100%;
+    border-width: 1px;
+    border-color:rgba(0,0,50,1);
+    border-style: solid;
+    animation: pulse;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
+
+.grid-rool{
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.person-frame{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: wheat;
+    width: 50%;
+    border-color: silver;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0px 0px 50px #ed145b;
+}
+
+.person-frame-data{
+
+}
+
+.grid-main-data{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.photo{
+
+}
+
+.main-data{
+    text-align: right;
+}
+

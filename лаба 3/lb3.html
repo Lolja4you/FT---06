@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+
+  <head>
+    <title>Лабораторная работа 3</title>
+
+    <link rel="stylesheet" href="лаба 2/style.css"/>
+    <link rel="stylesheet" href="style1.css"/>
+  </head>
+
+  
+
+  <body>
+    <header class="header">
+      <a  href="лаба 1/laba_1.html">Основная страница</a>
+  
+      <a  href="лаба 2/laba_2.html">Подключение css файлов</a>
+    </header>
+    <div style="margin: 100px;"></div>
+
+    <h1 style="text-align: center;">Горизонтальное Позиционирование</h1>
+    <br><div class="container">
+
+      <div class="block" >
+      </div><br>
+      <img  src="images (1).jpg" class="img" onclick="openModal(this)">
+      <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" alt="">
+        </div>
+      </div>
+      
+    </div>
+    <div style="margin: 100px;"></div>
+    <h1 style="text-align: center;">Вертикальное  Позиционирование</h1>
+    <br><div class="container-2">
+      <div class="block-2" />
+    </div>
+    <div class="block-3">
+        
+    </div>
+    </div>
+    <div style="margin: 100px;"></div>
+    <h1 style="text-align: center;">работа с flex</h1>
+    <br><div class="container-3">
+
+      <div class="block-3">
+        
+      </div>
+      <div class="block-3">
+        
+      </div>
+      <div class="block-3">
+        
+      </div>
+      <div class="block-3">
+        
+      </div>
+      <div class="block-3">
+        
+      </div>
+      <div class="block-3">
+        
+      </div>
+      <div class="block-3">
+        
+      </div>
+      <div class="block-3">
+        
+      </div>
+      <div class="block-3">
+        
+      </div>
+      <div class="block-3">
+        
+      </div>
+
+    </div>
+    <div style="margin: 100px;"></div>
+    <h1 style="text-align: center;" >работа со свойством Position</h1>
+    <br><div class="container-4">
+
+      <div class="block-4">
+      </div>
+      <div class="block-5">
+      </div>
+      <div class="block-6">
+      </div>
+    </div>
+
+    <img src="лаба 2/up-arrow.png" class="page-up-icon" onclick="scrollToTop()">
+    <script>
+      function scrollToTop() { //up arrow
+        window.scrollTo({
+          top: 0, //на какую позицию
+          behavior: "smooth" //плавно
+        });
+      }
+      function openModal(img) {
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalImage");
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+      }
+      function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+      }
+    </script>
+
+  </body>
+
+  
+</html>
