@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// Создаем массив студентов
+const students = [
+    { name: 'Alice', group: 'A' },
+    { name: 'Bob', group: 'B' },
+    { name: 'Charlie', group: 'A' },
+    { name: 'David', group: 'C' },
+    { name: 'Eve', group: 'B' },
+    { name: 'Frank', group: 'A' },
+    { name: 'Grace', group: 'C' },
+    { name: 'Hank', group: 'B' },
+    { name: 'Ivy', group: 'D' },
+    { name: 'code-ewA1', group: 'A' },
+    { name: 'code-ewD2', group: 'FPGA' },
+    { name: 'code-ewC1123A1', group: 'ALPHA' },
+    { name: 'code-ewAq2D2', group: 'GAMMA' },
+    { name: 'code-dsC1123', group: 'DIGMA' },
+    { name: 'code-Aq2GH6545', group: 'FPGA' },
+    { name: 'code-ewds1244A1M3336G', group: 'DELTAPGALPHA' },
+    { name: 'code-ewewAD213ehD2A1', group: 'GAMMAPGALPHA' },
+    { name: 'code-ew1244C1123D2', group: 'DIGMAHPAMMALPHA' },
+    { name: 'code-ewAD213ehAq2C1123A1', group: 'DIGMAAMMA' },
+    { name: 'code-ewdsE214214343Aq2D2', group: 'DIGMAELTA' },
+    { name: 'code-dsCov2132C1123GH6545', group: 'DELTA' },
+    { name: 'code-1244E214214343Aq2M3336G', group: 'PHPELTA' },
+    { name: 'code-ewds1244231223Cov2132AD213ehA1', group: 'PHP' },
+    { name: 'code-ewCe2qAD213ehD2GH6545', group: 'PHPPGA' },
+    { name: 'code-124423112B232432223C1123M3336G', group: 'FPGALPHA' },
+    { name: 'code-Ce24214qE21343AD213ehAq2GH6545', group: 'GAMMAPGALPHA' },
+    { name: 'code-ds12B4214232432Cov2132E21343M3336G', group: 'DIGMAAMMALPHA' },
+    { name: 'code-Cov2132GH6545', group: 'DIGMAAMMA' },
+    { name: 'code-12442314214223E21343M3336G', group: 'DIGMAELTA' },
+    { name: 'code-231Ce2q223Cov2132AD213eh', group: 'DELTAPGA' },
+    { name: 'code-12B232432Ce2qGH6545', group: 'PHPELTAPGALPHA' },
+    { name: 'code-23112B232432223M3336G', group: 'PHPAMMALPHA' },
+    { name: 'code-Ce24214qE21343', group: 'DIGMAHPAMMA' },
+    { name: 'code-12B232432Cov2132', group: 'DIGMA' },
+    { name: 'code-GH6545', group: 'DELTA' },
+    { name: 'code-231223M3336G', group: 'DELTA' },
+    { name: 'code-Ce2qGH6545', group: 'PHP' },
+    { name: 'code-212B232432M3336G', group: 'PHP' },
+    { name: 'code-312B232432M3336G', group: 'PHP' },
+    { name: 'code-412B232432M3336G', group: 'PHP' },
+    { name: 'code-512B232432M3336G', group: 'PHP' },
+    { name: 'code-6712B232432M3336G', group: 'PHP' },
+    { name: 'code-7812B232432M3336G', group: 'PHP' },
+];
+
+// Используем Map для подсчета числа студентов в каждой группе
+const groupCountMap = students.reduce(
+    (groupMap, student) => {
+        const group = student.group;
+        groupMap.set(group, (groupMap.get(group) || 0) + 1);
+        return groupMap;
+    }, 
+    new Map()
+);
+
+// Находим самую большую группу
+let maxGroupCount = 0;
+groupCountMap.forEach(count => {
+    if (count > maxGroupCount) {
+        maxGroupCount = count;
+    }
+});
+
+console.log('Число обучающихся в самой большой группе:', maxGroupCount);
+</script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// Создаем массив студентов для примера
+const students = [
+    { name: 'Alice', lastName: 'Smith', averageGrade: 85 },
+    { name: 'Bob', lastName: 'Johnson', averageGrade: 70 },
+    { name: 'Charlie', lastName: 'Williams', averageGrade: 92 },
+    { name: 'David', lastName: 'Brown', averageGrade: 78 },
+    { name: 'Eve', lastName: 'Jones', averageGrade: 88 },
+    { name: 'Frank', lastName: 'Davis', averageGrade: 65 },
+    { name: 'Grace', lastName: 'Miller', averageGrade: 95 },
+    { name: 'Hank', lastName: 'Wilson', averageGrade: 82 },
+    { name: 'Ivy', lastName: 'Moore', averageGrade: 90 }
+];
+
+// Функция сортировки массива студентов по средней оценке с помощью сортировки Шелла
+const shellSortStudentsByAverageGrade = (students) => {
+    let increment = Math.floor(students.length / 2);
+    while (increment > 0) {
+        for (let i = increment; i < students.length; i++) {
+            let j = i;
+            const temp = students[i];
+            while (j >= increment && students[j - increment].averageGrade > temp.averageGrade) {
+                students[j] = students[j - increment];
+                j -= increment;
+            }
+            students[j] = temp;
+        }
+        increment = Math.floor(increment / 2);
+    }
+    return students;
+};
+
+// Функция бинарного поиска студентов в отсортированном массиве по фамилии и имени
+const binarySearchStudentByName = (students, lastName, name) => {
+    const sortedStudents = students.sort((a, b) => a.lastName.localeCompare(b.lastName));
+    let low = 0;
+    let high = sortedStudents.length - 1;
+
+    while (low <= high) {
+        const mid = Math.floor((low + high) / 2);
+        const student = sortedStudents[mid];
+        if (student.lastName === lastName && student.name === name) {
+            return student;
+        } else if (student.lastName.localeCompare(lastName) < 0 || (student.lastName === lastName && student.name.localeCompare(name) < 0)) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+
+    return null;
+};
+
+// Пример использования функций
+const sortedStudents = shellSortStudentsByAverageGrade(students);
+console.log('Отсортированный массив студентов по средней оценке:', sortedStudents);
+
+const searchStudent = binarySearchStudentByName(sortedStudents, 'Miller', 'Grace');
+console.log('Результат бинарного поиска:', searchStudent);
+</script>
+</html>
