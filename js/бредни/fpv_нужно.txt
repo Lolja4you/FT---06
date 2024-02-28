@@ -1,0 +1,11 @@
+9.	Аист-100
+10.	PD-2
+11.	Бобёр
+
+https://ioriginal.store/api/v2/shop/product/73292818
+https://ioriginal.store/data/products.json.gz
+https://ioriginal.store/api/v2/shop/product/73929196
+
+
+37831702 - мини дрон 
+40093717 - дрон с камерой 

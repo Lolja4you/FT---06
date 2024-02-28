@@ -1,0 +1,227 @@
+<html>
+    <head>
+        <style>
+            td{
+                border: black solid 1px;
+                text-align: center;
+                padding: 2%;
+            }
+            tr{
+                border: black solid 1px;
+            }
+            th{
+                border: black solid 2px;
+                padding: 3%;  
+                text-align: center;
+            }
+            table{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                margin: 0;
+            }
+            
+            /* Стилизация формы */
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            
+            label {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            
+            input[type="text"] {
+                padding: 7px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                border: 1px solid rgb(255, 145, 0);
+            }
+            
+            input[type="submit"] {
+                padding: 10px 20px;
+                background-color: rgb(255, 145, 0);
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                border: 1px solid gray;
+            }
+            
+            /* Уведомление о добавлении строки */
+            .push-up-notification {
+                display: none;
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                width: 300px;
+                padding: 25px;
+                background-color: rgba(133, 133, 133, 0.699);
+                color: #fff;
+                font-size: 20px;
+                border-radius: 5px;
+                z-index: 999;
+                text-align: center;
+                animation: slideIn 0.5s ease-in-out;
+                border-start-start-radius: 10px;
+                border-end-start-radius: 10px;
+                box-shadow: 1px 5px 7px rgba(0, 0, 0, 0.719);
+                text-shadow: 0px 0px 0px black;
+            }
+
+            @keyframes slideIn {
+                from {
+                    transform: translateY(-100%);
+                }
+                to {
+                    transform: translateY(0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="lastname">Фамилия:</label>
+            <input type="text" id="lastname" name="lastname"><br><br>
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <input type="submit" value="Добавить">
+        </form>
+        
+        <table id="table" style="width:100%; height: 100%; border: solid black 2px; border-collapse: collapse;">
+        <caption style="font-size: 21px; font-weight: bold; margin: 50px;">ЭХЭХУХУХУЭУУХУХ</caption>
+        </table>
+        
+        <div class="push-up-notification" id="notification"></div>
+        
+        <script>
+            k = 0 
+            i = 0
+            let arr = [
+            ['#', '1st Name', 'Last Name', 'Username'], 
+            [k++, 'Emma', 'Young', `@emmawhite${k}${k}`],
+            [k++, 'Jacob', 'Scott', `@jacobscott${k}`],
+            [k++, 'Emily', 'Wright', `@emilywright${k}${k}`],
+            [k++, 'Michael', 'Anderson', `@michaelanderson${k}`],
+            [k++, 'Samantha', 'Martin', `@samanthamartin${k}${k}`],
+            [k++, 'Daniel', 'Allen', `@danielallen${k}`],
+            [k++, 'Oliver', 'Hill', `@oliverhill${k}${k}`],
+            [k++, 'Lucas', 'Adams', `@lucasadams${k}`],
+            [k++, 'Natalie', 'Cook', `@nataliecook${k}${k}`],
+            [k++, 'Andrew', 'Parker', `@andrewparker${k}`],
+            [k++, 'Ava', 'Bell', `@avabell${k}${k}`],
+            [k++, 'Benjamin', 'Turner', `@benjaminturner${k}`],
+            [k++, 'Chloe', 'Murphy', `@chloemurphy${k}${k}`],
+            ];
+
+            let table = document.querySelector('#table');
+
+            for (let subArr of arr) {
+                let tr = document.createElement('tr');
+                
+                for (let elem of subArr) {
+                    if(i == 0 ){
+                        let th = document.createElement('th');
+                        th.textContent = elem;
+                        tr.appendChild(th);
+                        th.style.backgroundColor = 'white';
+                    }
+                    else{
+                        let td = document.createElement('td');
+                        td.textContent = elem;
+                        tr.appendChild(td);
+                        if((i % 3) == 0 ){
+                            tr.style.backgroundColor = 'coral';
+                        }
+                        else if ((i % 3) == 1 ){
+                            tr.style.backgroundColor = 'wheat';
+                        }
+                        else{
+                            tr.style.backgroundColor = 'silver';
+                        }
+                    }
+                }
+                i++;
+                table.appendChild(tr);
+            }
+            
+            // Получаем форму и таблицу по их id
+            let form = document.querySelector('form');
+            let notification = document.getElementById('notification');
+
+            // Назначаем обработчик события на отправку формы
+            // Назначаем обработчик события на отправку формы
+
+            //КОПИРУЙ
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Предотвращаем отправку формы
+
+                // Получаем значения полей формы
+                let name = document.getElementById('name').value;
+                let lastname = document.getElementById('lastname').value;
+                let username = document.getElementById('username').value;
+
+                // Проверяем, что все поля заполнены
+                if (name.trim() === '' || lastname.trim() === '' || username.trim() === '') {
+                    // Показываем сообщение об ошибке
+                    show_push_up(false);
+
+                    // Очищаем значения полей формы
+
+                    return; // Завершаем обработчик
+                }
+
+                // Создаем новую строку таблицы
+                let tr = document.createElement('tr');
+
+                // Создаем ячейки и заполняем их значениями
+                let td1 = document.createElement('td');
+                td1.textContent = table.rows.length; // Получаем номер строки
+                let td2 = document.createElement('td');
+                td2.textContent = name;
+                let td3 = document.createElement('td');
+                td3.textContent = lastname;
+                let td4 = document.createElement('td');
+                td4.textContent = username;
+
+                // Добавляем ячейки в строку
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tr.appendChild(td4);
+
+                // Добавляем строку в таблицу
+                table.appendChild(tr);
+
+                // Очищаем значения полей формы
+                document.getElementById('name').value = '';
+                document.getElementById('lastname').value = '';
+                document.getElementById('username').value = '';
+
+                // Показываем уведомление о добавлении строки
+                show_push_up(true)
+            });
+
+            function show_push_up(arg){     
+                notification.style.display = 'block';
+                if(arg != true){
+                    notification.innerText = 'Заполните все поля!';
+                    notification.style.borderRight = '7px solid red';
+                } else{
+                    notification.innerText = 'Запись добавлена!';
+                    notification.style.borderRight = '7px solid limegreen';
+                }   
+                // Скрываем уведомление через 2 секунды
+                setTimeout(function() {
+                    notification.style.display = 'none';
+                }, 2000);
+            }
+        </script>
+    </body>
+</html>

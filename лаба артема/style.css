@@ -1,0 +1,60 @@
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: rever;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+
+body {
+    background-color: #7df0ff; /* Цвет подложки страницы */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+li{
+    margin-left: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.content{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.left-content{
+    margin: 10px;
+    padding: 5%;
+    background-color: white;
+    display: inline-block;
+
+    border: 1px solid silver;
+    box-shadow: 0px 0px 10px gray;
+    max-width: 40%;
+}
+
+.right-content{
+    display: inline-block;
+    box-shadow: 0px,0px,5px black;
+    max-width: 40%;
+    margin: 10px;
+    
+}
+
+
+/* Стили для изображения */
+img {
+    max-width: 100%; /* Максимальная ширина изображения по размеру контейнера */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+}
+
+

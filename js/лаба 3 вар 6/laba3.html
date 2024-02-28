@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+class Student {
+  constructor(фамилия, имя, marks) {
+    this.фамилия = фамилия;
+    this.имя = имя;
+    this.marks = marks;
+  }
+
+  printStudentInfo() {
+    console.log("Фамилия:", this.фамилия);
+    console.log("Имя:", this.имя);
+    console.log("Оценки:");
+    this.marks.forEach((mark) => {
+      console.log(mark.subject + ": " + mark.mark);
+    });
+  }
+
+  getAverageMark() {
+    let sum = 0;
+    this.marks.forEach((mark) => {
+      sum += mark.mark;
+    });
+    return sum / this.marks.length;
+  }
+
+  getMarksBySubject(subject) {
+    const marksBySubject = this.marks.filter((mark) => mark.subject === subject);
+    console.log(`Оценки по предмету ${subject}:`);
+    marksBySubject.forEach((mark) => {
+        console.log(`${mark.subject}: ${mark.mark}`);
+  });
+}
+
+  addMark(subject, mark) {
+    this.marks.push({ subject, mark });
+  }
+
+  removeMarksBySubject(subject) {
+    this.marks = this.marks.filter((mark) => mark.subject !== subject);
+  }
+}
+</script>
+</html>
+
+
+"Иванов", "Иван", [
+  {"subject": "Математика", "mark": 5},
+  {"subject": "Физика", "mark": 4},
+  {"subject": "Химия", "mark": 3}
+]

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+class Figure {
+  constructor(x, y) {
+    this._x = x;
+    this._y = y;
+  }
+
+  square() {
+    return undefined;
+  }
+}
+
+class Circle extends Figure {
+  constructor(x, y, r) {
+    super(x, y);
+    this._r = r;
+  }
+
+  square() {
+    return Math.PI * this._r ** 2;
+  }
+}
+
+class Rectangle extends Figure{
+  constructor(x, y, h, w) {
+    super(x, y);
+    this._h = h;
+    this._w = w;
+  }
+
+  square() {
+    return this._h*this._w;
+  }
+}
+</script>
+</html>
+
+
+const circle = new Circle(0, 0, 5);
+console.log("Площадь круга:", circle.square());
+
+const rectangle = new Rectangle(0, 0, 4, 6);
+console.log("Площадь прямоугольника:", rectangle.square());

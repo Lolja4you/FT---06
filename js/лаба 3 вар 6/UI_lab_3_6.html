@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .input {
+            margin-bottom: 10px;
+        }
+        .button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .output {
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="title">Student Management System</div>
+            <div class="input">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name">
+            </div>
+            <div class="input">
+                <label for="second_name">Second Name:</label>
+                <input type="text" id="second_name">
+            </div>
+            <div class="input">
+                <label for="mark_pk">Mark PK:</label>
+                <input type="number" id="mark_pk">
+            </div>
+            <div class="input">
+                <label for="subject_pk">Subject PK:</label>
+                <input type="number" id="subject_pk">
+            </div>
+            <div class="input">
+                <label for="width">Width:</label>
+                <input type="number" id="width">
+            </div>
+            <div class="input">
+                <label for="subject_name">Subject Name:</label>
+                <input type="text" id="subject_name">
+            </div>
+            <div class="input">
+                <button onclick="createStudent()">Create Student</button>
+                <button onclick="addMark()">Add Mark</button>
+                <button onclick="createSubject()">Create Subject</button>
+                <button onclick="deleteAllMarks()">Delete All Marks</button>
+            </div>
+            <div class="output" id="output"></div>
+        </div>
+    </div>
+
+    <script>
+        class Student {
+            constructor(first_name, second_name){
+                this.first_name = first_name
+                this.second_name = second_name
+                this.marks = []
+            }
+        
+            add_mark(mark_pk, subject_pk, width) {
+               this.marks.push(new Mark(mark_pk, subject_pk, width)) 
+            }
+            
+            del_all_marks_in_subject(subject){
+                let subject_pk
+                if ((typeof subject) == 'string'){
+                    for (let i = 0; i < created_subject.length; i++) {
+                        let subjectObj = created_subject[i];
+                        if(subjectObj.name == subject){
+                            subject_pk = subjectObj.subject_pk
+                        }
+                      }
+                } else {
+                    subject_pk = subject
+                }
+                for (let i = this.marks.length - 1; i >= 0; i--){
+                    if (this.marks[i].subject_pk == subject_pk){
+                        this.marks.splice(i, 1)
+                    }
+                }
+            }
+        }
+        
+        class Mark {
+            constructor(mark_pk, subject_pk, width){
+                this.mark_pk = mark_pk
+                this.subject_pk = subject_pk
+                this.width = width
+            }
+        }
+        
+        class Subject {
+            constructor(subject_pk, name){
+                this.subject_pk = subject_pk
+                this.name = name
+            }
+        }
+        
+        let created_subject = []
+        let students = []
+        
+        function createStudent() {
+            const first_name = document.getElementById("first_name").value;
+            const second_name = document.getElementById("second_name").value;
+            const student = new Student(first_name, second_name);
+            students.push(student);
+            document.getElementById("output").innerHTML = "Student created: " + first_name + " " + second_name;
+        }
+        
+        function addMark() {
+            const mark_pk = document.getElementById("mark_pk").value;
+            const subject_pk = document.getElementById("subject_pk").value;
+            const width = document.getElementById("width").value;
+            const studentIndex = document.getElementById("student_select").selectedIndex;
+            const student = students[studentIndex];
+            student.add_mark(mark_pk, subject_pk, width);
+            document.getElementById("output").innerHTML = "Mark added for Student: " + student.first_name + " " + student.second_name;
+        }
+        
+        function createSubject() {
+            const subject_pk = document.getElementById("subject_pk").value;
+            const subject_name = document.getElementById("subject_name").value;
+            const subject = new Subject(subject_pk, subject_name);
+            created_subject.push(subject);
+            document.getElementById("output").innerHTML = "Subject created: " + subject_name;
+        }
+        
+        function deleteAllMarks() {
+            const studentIndex = document.getElementById("student_select").selectedIndex;
+            const student = students[studentIndex];
+            const subjectIndex = document.getElementById("subject_select").selectedIndex;
+            const subject = created_subject[subjectIndex];
+            student.del_all_marks_in_subject(subject.name);
+            document.getElementById("output").innerHTML = "All marks deleted for Student: " + student.first_name + " " + student.second_name + " in Subject: " + subject.name;
+        }
+    </script>
+</body>
+</html>

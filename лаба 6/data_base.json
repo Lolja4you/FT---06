@@ -1,0 +1,58 @@
+{
+    "Cara Delevingne": {
+      "Date of Birth": "12 august 1992",
+      "Age": 31,
+      "Movies": ["Anna Karenina", "The Face of an Angel", "Kids in Love", "Suicide Squad", "Valerian and the City of a Thousand Planets"],
+      "Oscar-winning Films": ["Suicide Squad", "Valerian and the City of a Thousand Planets"],
+      "Favorite Dish": "anything, omnivorous",
+      "Interesting Fact": "She started her modeling career at the age of 10. Delevingne was scouted by an agent while shopping with her mother in London. This marked the beginning of her successful journey in the fashion industry."
+    },
+    "Brad Pitt": {
+      "Date of Birth": "18 December 1963",
+      "Age": 58,
+      "Movies": ["Fight Club", "Se7en", "Inglourious Basterds", "The Curious Case of Benjamin Button", "Once Upon a Time in Hollywood"],
+      "Oscar-winning Films": ["Once Upon a Time in Hollywood"],
+      "Favorite Dish": "unknown",
+      "Interesting Fact": "Brad Pitt is not just an actor, but also a film producer. He has produced several successful films, including '12 Years a Slave' which won the Academy Award for Best Picture."
+    },
+    "Ryan Gosling": {
+      "Date of Birth": "12 November 1980",
+      "Age": 41,
+      "Movies": ["La La Land", "Drive", "The Notebook", "Crazy, Stupid, Love", "Blade Runner 2049"],
+      "Oscar-winning Films": [],
+      "Favorite Dish": "unknown",
+      "Interesting Fact": "Ryan Gosling started his career as a child actor and gained recognition for his role in the television series 'Breaker High'. He later transitioned into film and became known for his performances in romantic dramas."
+    },
+    "Amber Heard": {
+      "Date of Birth": "22 April 1986",
+      "Age": 36,
+      "Movies": ["Aquaman", "The Rum Diary", "Magic Mike XXL", "London Fields", "3 Days to Kill"],
+      "Oscar-winning Films": [],
+      "Favorite Dish": "unknown",
+      "Interesting Fact": "Amber Heard is not just an actress, but also an activist. She has been involved in several causes, including raising awareness about domestic violence and supporting organizations that work towards gender equality."
+    },
+    "Sylvester Stallone": {
+      "Date of Birth": "6 July 1946",
+      "Age": 75,
+      "Movies": ["Rocky", "Rambo", "The Expendables", "Creed", "Escape Plan"],
+      "Oscar-winning Films": ["Rocky"],
+      "Favorite Dish": "unknown",
+      "Interesting Fact": "Sylvester Stallone is not just an actor, but also a screenwriter and film director. He wrote the script for the movie 'Rocky' and went on to win the Academy Award for Best Picture and Best Original Screenplay for it."
+    },
+    "Jason Statham": {
+      "Date of Birth": "26 July 1967",
+      "Age": 54,
+      "Movies": ["The Transporter", "Snatch", "Crank", "The Expendables", "Fast & Furious"],
+      "Oscar-winning Films": [],
+      "Favorite Dish": "unknown",
+      "Interesting Fact": "Jason Statham is known for performing his own stunts in action films. He has a background in martial arts and has trained in various combat techniques, which he brings to life in his roles."
+    },
+    "Elon Musk": {
+      "Date of Birth": "28 June 1971",
+      "Age": 50,
+      "Movies": [],
+      "Oscar-winning Films": [],
+      "Favorite Dish": "unknown",
+      "Interesting Fact": "Elon Musk is not an actor but a business magnate and entrepreneur. He is the CEO of Tesla, SpaceX, Neuralink, and The Boring Company. Musk is known for his ambitious vision of advancing technology and making breakthroughs in various industries."
+    }
+  }

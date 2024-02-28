@@ -1,0 +1,197 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../style1.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Resume</title>
+
+    </head>
+    <body>
+        <header class="header">
+            <a  href="../лаба 1/laba_1.html">Основная страница</a>
+        
+            <a  href="../lb3.html">Позиционирование элементов</a>
+        </header>
+        <!-- UP ARROW -->
+        <img src="up-arrow.png" class="page-up-icon" onclick="scrollToTop()">
+        <div class="main-frame">
+            <div style="display: grid; justify-items: center;">
+                <div class="container-section">
+                    
+                    <div style="display: flex;">
+                    
+                    <!-- left section start -->
+                    <div class="right-part">
+                        <!-- change color theme -->
+                        <img id="image" src="night-mode.png" class="dark-mode-icon" onclick="toggleDarkMode()">
+                        <div id="myModal" class="modal">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <div class="modal-content">
+                                <img id="modalImage" alt="">
+                            </div>
+                        </div>
+                        <div class="right-section-mrg50px-rght-lft">
+                            <section>
+                                <h2>Full stack developer junior+</h2>
+                            </section>
+                            <section>
+                                <h2>Личная информация</h2>
+                                <li><u><b>Образование:</b></u> есть наверное</li>
+                                <li><u><b>Дата рождения:</b></u> 01.01.2004г</li>
+                                <li><u><b>Пол:</b></u> мужской</li>
+
+                            </section>
+                            <section>
+                                <h2>Опыт работы</h2>
+                                <p style="margin-left: 15px;"><u><strong>OOO "Очень красивый код"</strong></u></p>
+                                <li><u><b>Период работы:</b></u> c 01.01.2004 по настоящее время</li>
+                                <li><u><b>Должность:</b></u> team leader</li>
+                                <li><u><b>Обязоности:</b></u> Давать задачи джунам и пить кофе</li>
+                            </section>
+                            <section>
+                                <h2>Образование</h2>
+                                <p style="margin-left: 15px;"><strong>федеральное государственное автономное образовательное учреждение высшего образования «Самарский национальный исследовательский университет имени академика С.П. Королева»</strong></p>
+                                <li><u><b>институт:</b></u> информатики и кибернетики </li>
+                                <li><u><b>Специальность:</b></u> Конструктор электронных средств</li>
+                                <li><u><b>Дата окончания:</b></u> ДА!</li>
+                                <li><u><b>Форма обучения:</b></u> очная</li>
+                            </section>
+                            <section>
+                                <h2>Курсы и тренинги</h2>
+                                <li>Основы python (stepik)</li>
+                                <li>ИОТ промышленость 4.0 (Самарский университет)</li>
+                                <li>ЦК Frontend technology (Самарский университет)</li>
+                            </section>
+                            <section>
+                                <h2>Дополнительная информация</h2>
+                                <li><u><b>О себе:</b></u> Toyota Prius (/ˈpriːəs/) — первый в мире массовый гибридный легковой автомобиль, который движется за счёт как бензинового, так и электрического двигателей, производимый японской корпорацией Toyota с 1997 года. Латинское слово prius (яп. プリウス) в названии модели трактуется как первый, изначальный[1]. Автомобиль имеет низкий уровень вредных выхлопов и малый расход топлива. За свою экологичность и оригинальность конструкции получил множество призов и наград, в том числе признавался автомобилем года в Японии[2][3], Северной Америке[4] и Европе[5]. Также, компания Toyota получила награду ЮНЕП, подразделения ООН по охране окружающей среды за разработку дружественных к окружающему миру автомобилей, в том числе за модель Prius[6].
+
+                                    Седан первого поколения в декабре 1997 года поступил в продажу, но только в Японии. А уже начиная с 2000 года немного модернизированный автомобиль стали поставлять в Северную Америку и Европу. Осенью 2003 года увидел свет автомобиль второго поколения. На смену седану пришел более длинный, широкий и обтекаемый хэтчбек с большой дверью багажника сзади[7]. Prius становился всё популярнее, и публика с нетерпением ждала модель третьего поколения, которая была представлена весной 2009 года. Силуэт автомобиля не претерпел больших изменений, однако на смену плавным линиям пришли более модные четкие контуры и плоские поверхности[8]. В декабре 2015 года Prius четвёртого поколения начали продавать в Японии[9]. В ноябре 2022 года в Японии состоялась мировая премьера нового Prius пятого поколения[10].
+                                    
+                                    Помимо базовой модели выпускаются большего размера универсал Prius α/v/+ и более компактный хэтчбек Aqua/Prius c, а также автомобиль Prius PHV (Plug-in Hybrid Vehicle) с увеличенной аккумуляторной батареей, которую можно подзаряжать от внешней электросети.
+                                    
+                                    С 2009 по 2019 годы автомобиль Prius продавался в России.</li>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- left section end -->
+                    <!-- rigth section start -->
+                    <div class="left-part">
+                        <div class="pic-frame">
+                            <img src="uwu.jpg" alt="" class="self-pic" width="75%"
+                            onclick="openModal(this)"
+                            >
+                        </div><hr>
+                        <div class="left-data-frame">
+                            <section>
+                                <h3>Иванов Данил Александрович</h3><br>
+                                <p><u><strong>Группа:</strong></u> 6201</p>
+                                <p><u><strong>Группа ЦК:</strong></u> ЦК23-FT-06</p>
+                            </section>
+                            <section>
+                                <h3>Стек технологий</h4>
+                                <u><strong>Frontend:</strong></u>
+                                <ul>
+                                    <li>js/html/css/scss/sass</li>
+                                    <li>React</li>
+                                    <li>React Native</li>
+                                    <li>Vue.js</li>
+                                    <li>axios/ajax</li>
+                                    <li>websocket</li>
+                                    <li>JWT</li>
+                                </ul>
+                                <u><strong>Backend:</strong></u>
+                                <ul>
+                                    <li>python</li>
+                                    <li>django/DRF</li>
+                                    <li>websocket</li>
+                                    <li>PostgresSQL</li>
+                                    <li>fastAPI</li>
+                                    <li>celery</li>
+                                    <li>Simple JWT</li>
+                                </ul>
+                                <u><strong>Other skills:</strong></u>
+                                <ul>
+                                    <li>Docker</li>
+                                    <li>git</li>
+                                    <li>Linux</li>
+                                    <li>bash</li>
+                                </ul>
+                            </section>
+
+                            <section>
+                                <h4>Связаться со мной</h4>
+                                <p class="left-links">
+                                    <img src="icons8-github.svg" class="left-icon"  alt="github">
+                                    Github: <a href="https://github.com/Lolja4you"> Lolja4you</a>
+                                </p>
+                                <p class="left-links">
+                                    <img src="icons8-vk.svg" class="left-icon"  alt="github">
+                                    VK: <a href="https://vk.com/kish_coi_xoi"> @kish_coi_xoi</a>
+                                </p>
+                                <p class="left-contact">
+                                    <img src="icons8-gmail.svg" class="left-icon"  alt="github">
+                                    gmail: fokus.meloch@gmail.com
+                                </p>
+                                <p class="left-contact">
+                                    <img src="icons8-mail.svg" class="left-icon" alt="github">
+                                    mail.ru: konstruktorysgau@mail.ru
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- right section end -->
+                <!-- footer start-->
+                </div>
+                    <section style="padding: 25px;border-bottom-left-radius:10px; border-bottom-right-radius:10px;text-align:center;margin-top: 0px; background-color: rgba(0,0,20,1); width: 100%;"><p>Made by <b style="color: #f4ceb1;">Lolja4you</b></p></section>
+                </div>
+                <!-- footer end-->
+            </div>
+        </div>
+        
+        <script>
+            var is_dark = false; 
+
+            function toggleDarkMode() {
+                var body = document.getElementsByClassName('right-part')[0];
+                body.classList.toggle("right-part-drk-md");
+
+                var icon = document.getElementsByClassName('dark-mode-icon')[0]
+                icon.classList.toggle("light-mode-icon")
+
+                var imageName;
+                if (!is_dark) {
+                    imageName = "moon.png";
+                    is_dark = true;
+                    console.log('light');
+                } else {
+                    imageName = "night-mode.png";
+                    is_dark = false;
+                    console.log('dark');
+                }
+                document.getElementById("image").src = imageName;
+            }
+            function scrollToTop() { //up arrow
+                window.scrollTo({
+                    top: 0, //на какую позицию
+                    behavior: "smooth" //плавно
+                });
+            }
+            function openModal(img) {
+                var modal = document.getElementById("myModal");
+                var modalImg = document.getElementById("modalImage");
+                modal.style.display = "flex";
+                modalImg.src = img.src;
+            }
+
+            function closeModal() {
+                var modal = document.getElementById("myModal");
+                modal.style.display = "none";
+            }
+        </script>
+        
+    </body>
+
+
+</html>

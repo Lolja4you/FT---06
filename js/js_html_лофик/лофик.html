@@ -1,0 +1,49 @@
+<html>
+<head>
+    <script language="JavaScript">
+        if (document.images) {
+            console.log('mewo');
+            var elflist = new Image();
+            elflist.src = "elflist.gif";
+            var elftrans = new Image();
+            elftrans.src = "elftrans.gif";
+        }
+
+        function flip(imgName, imgVar) {
+            if (document.images)
+                document[imgName].src = eval(imgVar);
+            return true;
+        }
+        
+        function nothing() {
+            alert('Say hellow')
+        }
+    </script>
+
+    <style>
+        h1, td {
+            font-family: sans-serif;
+        }
+    </style>
+
+    <title>Эльф-помощник</title>
+</head>
+
+<body>
+    <h1>Эльф-помощник</h1>
+    <hr>
+    <table border="0">
+        <tr>
+            <td>
+                <a href="javascript:nothing();" onMouseOver="flip('elf', 'elftrans.src'); flip('elf2', 'elflist.src');" onMouseOut="flip('elf', 'elflist.src'); flip('elf2', 'elftrans.src');">
+                    <img name="elf" src="elflist.gif" alt="Эльф-помощник" border="1px solid black" width="256" height="256">
+                </a>
+                <img name="elf2" src="elftrans.gif" alt="Эльф-помощник" border="1px solid black" width="256" height="256">
+            </td>
+        </tr>
+        <tr>
+            <td>Нажмите на Дикаприо для получения помощи (первой)</td>
+        </tr>
+    </table>
+</body>
+</html>

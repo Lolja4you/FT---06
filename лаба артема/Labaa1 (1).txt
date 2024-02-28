@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Лабораторная работа 1</title>
+  <style>
+    body {
+      background-color: #333;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      border: solid white;
+      border-radius: 10px;
+      border-width: 2px;
+    }
+
+    h1, h2 {
+      text-shadow: 2px 2px 4px #000;
+      margin: 0;
+    }
+
+    a {
+      transition: color 2.9 linear;
+      text-decoration: none;
+      color: rgb(255, 193, 217);
+    }
+
+    a:hover {
+      color: rgb(255, 255, 255);
+    }
+
+    .resume {
+      display: flex;
+      flex-direction: row;
+      background-color: rgba(0,0,25,1);
+    }
+
+    .bio {
+      width: 50%;
+    }
+
+    .favorites {
+      width: 50%;
+    }
+
+    @keyframes pulse {
+      0% {
+        text-shadow:0px 5px 5px #ff69b4; /* здесь указываете нужный цвет */
+      }
+      25% {
+        text-shadow:0px 5px 5px red; /* здесь указываете нужный цвет */
+      }
+      50% {
+        text-shadow:0px 5px 5px #ff69b4; /* здесь указываете нужный цвет */
+      }
+      75% {
+        text-shadow:0px 5px 5px blue; /* здесь указываете нужный цвет */
+      }
+      100% {
+        text-shadow:0px 5px 5px #ff69b4; /* здесь указываете нужный цвет */
+      }
+    }
+    
+    u {
+      animation: pulse 3s infinite;
+      text-shadow: 0px 5px 5px #ff69b4;
+    }
+  </style>
+</head>
+<body>
+    <div>
+        <div class="resume">
+            <div class="bio" style="border-right: solid white 1px; margin: 10px;">
+                <h1>О себе</h1>
+            <p><b><u>Родился:</u></b> Оренбургская обл. г. Бугуруслан</p>
+            <p><b><u>Образование:</u></b> Самарский университет, ИИК, Конструирование и технология электронных стредств</p>
+            <p><b><u>Хобби:</u></b> Фотография</p>
+            <hr style="width: 101%; margin-left: -10px;">
+            <p><b><u>Интересные факты:</u></b> В 15 лет совершил впервые в своей жизни велопоездку, суммарно длиною 40 км, до соседнего города. Занимался 7 лет карате, где получил большое количество наград. С первых дней в университете я пытаюсь участвовать во многих активных мероприятиях, однако сегодня остановился только на СТЭМе и на рукопашном бою. </p>
+
+            </div>
+            <div class="favorites" style="margin: 10px">
+            <h2>Какие фильмы мне нравятся</h2>
+            <ul>
+                <li><u>Первому игроку приготовиться</u></li>
+                <li><u>Звездные Войны</u></li>
+                <li><u>Человек-паук</u></li>
+                
+            </ul>
+            <h2>Какая музыка мне нравится</h2>
+            <ol>
+                <li><u>Рок</u></li>
+                <li><u>Электронная музыка</u></li>
+                <li><u>Поп</u></li>
+            </ol>
+            </div>
+
+        </div>
+    </div>
+    
+    <div style="text-align: center; background-color: rgba(0,0,25,1); padding: 50px;">
+      <img src="2Rsfm1cnjsA.jpg" width="300" height="400" style="background-color: gray;display:flex;margin:auto;border:solid; border-width: 2px; border-color: white;">
+      <div style="margin-top: 50px;"/>
+        <h2>Как связаться со мной</h2>
+        <a href="https://vk.com/zefir_kka">ВКонтакте</a><br>    
+    </div>
+</body>
+</html>

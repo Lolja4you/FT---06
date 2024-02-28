@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+function multiplyTwoLargestNumbers(a, b, c) {
+    const numbers = [a, b, c];
+    numbers.sort((x, y) => y - x);  // Сортируем числа по убыванию
+    return numbers[0] * numbers[1];  // Возвращаем произведение двух максимальных чисел
+  }
+  
+  // Пример использования функции
+  const result = multiplyTwoLargestNumbers(5, 10, 3);
+  console.log(result);  // Выводит 50, так как 10 * 5 = 50</script>
+</html>
